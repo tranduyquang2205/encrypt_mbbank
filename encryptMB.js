@@ -12,8 +12,8 @@ async function makeEncrypt(requestData) {
 
 app.post('/encrypt', async (req, res) => {
   const requestData = req.body;
-  const encryptedData = await makeEncrypt(JSON.parse(JSON.stringify(requestData)));
-  res.json({ encryptedData });
+  const dataEnc = await makeEncrypt(JSON.parse(JSON.stringify(requestData)));
+  res.json({ dataEnc });
 });
 
 const port = 3001;
